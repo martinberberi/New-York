@@ -1,0 +1,83 @@
+<html lang = "en">
+
+
+<head>
+    <meta charset = "UTF-8">
+    <title>New York Airbnb</title>
+</head>
+
+
+<body>
+
+    <div style = "color:blue">
+    
+        <form action = "/predict" method = "post">
+            <h2>Predictive analysis</h2>
+            
+            <!-- Date -->
+            <h3>Last Review</h3><input type = "datetime-local" name = "Date" id = "Date" required = "required">
+            <br><br>
+            
+            <!-- Neighbourhood -->
+            <h3>Neighbourhood</h3><br><select name = "City" id = "first" required = "required">
+                <option value = "Manhattan">Manhattan</option>
+                <option value = "Brooklyn">Brooklyn</option>
+                <option value = "Queens">Queens</option>
+                <option value = "Bronx">Bronx</option>
+                <option value = "Staten_Island">Staten Island</option>
+            </select>
+            
+            <!--Room type -->
+            <h3>Room Type</h3><br><select name = "Room_Type" id = "second" required = "required">
+                <option value = "Entire_room">Entire Home/Apt</option>
+                <option value = "Private_room">Private Room</option>
+                <option value = "Shared_room">Shared Room</option>
+            </select>
+            
+             <!--Nights to stay -->
+            <h3>Nights To Stay</h3><input type="number" name = "nights" id = "third" required = "required">
+            
+            <!--Availibility -->
+            <h3>Availibility</h3><input type="number" name = "availibility" id = "sixth" required = "required">
+            
+            <!--Number of reviews -->
+            <h3>Number of Reviews</h3><input type="number" name = "nr_review" id = "fourth" required = "required">
+            
+            <!--Reviews per month -->
+            <h3>Reviews per month</h3><input type="number" name = "review_month" id = "fifth" required = "required">
+    
+        
+            <br><br><button type = "submit" value = "Submit" id = "sub">Check Price</button>       
+        
+        
+         </form>
+         
+         
+         <br><br><h3>{{ prediction_text }}</h3>
+         
+     </div>
+     
+     <style>
+     
+          #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+            }
+        
+         #sub:hover {
+            background-color: darkcyan;
+            }
+     
+     </style>    
+
+
+
+</body>
+
+
+
+
+</html>
